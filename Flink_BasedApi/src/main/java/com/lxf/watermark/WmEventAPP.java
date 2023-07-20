@@ -45,7 +45,7 @@ public class WmEventAPP {
                         System.out.println("key => " + value1.f0 + ", value => " + (value1.f1+value2.f1));
                         return Tuple2.of(value1.f0,value1.f1+value2.f1);
                     }
-                }, new ProcessWindowFunction<Tuple2<String, Integer>, String, String, TimeWindow>() { //全量缓存方式
+                }, new ProcessWindowFunction<Tuple2<String, Integer>, String, String, TimeWindow>() { //全量缓存方式，这里是对reducefunction的重载
                     FastDateFormat format = FastDateFormat.getInstance("yyyy-MM-dd HH:mm:ss");//获取传进来的格式化时间
                     @Override
                     public void process(String s, Context context, Iterable<Tuple2<String, Integer>> iterable, Collector<String> collector) throws Exception {
@@ -56,7 +56,11 @@ public class WmEventAPP {
                         }
                     }
                 }).print();
-
+        /**
+         * watermark其实就是延迟触发的一种机制
+         * wm = 数据所携带的时间（窗口中最大时间）- 延迟执行的时间
+         * wm >= 上一个窗口结束边界 就会触发窗口计算
+         */
 
     }
 }
