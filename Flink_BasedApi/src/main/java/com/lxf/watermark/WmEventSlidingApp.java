@@ -34,7 +34,7 @@ public class WmEventSlidingApp {
                 return Tuple2.of(splits[1], Integer.parseInt(splits[2]));
             }
         }).keyBy(x -> x.f0)
-                .window(SlidingProcessingTimeWindows.of(Time.seconds(10), Time.seconds(5)))
+                .window(SlidingProcessingTimeWindows.of(Time.seconds(10), Time.seconds(5))) //滑动窗口
                 .reduce(new ReduceFunction<Tuple2<String, Integer>>() {
                     @Override
                     public Tuple2<String, Integer> reduce(Tuple2<String, Integer> value1, Tuple2<String, Integer> value2) throws Exception {
