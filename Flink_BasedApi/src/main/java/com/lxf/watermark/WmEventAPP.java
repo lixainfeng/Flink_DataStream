@@ -25,7 +25,7 @@ public class WmEventAPP {
                  * 最大允许延迟时间，0秒意味着没有延迟
                  * eventTime抽取时间字段
                  */
-                .assignTimestampsAndWatermarks(new BoundedOutOfOrdernessTimestampExtractor<String>(Time.seconds(2)) {
+                .assignTimestampsAndWatermarks(new BoundedOutOfOrdernessTimestampExtractor<String>(Time.seconds(0)) {
                     @Override
                     public long extractTimestamp(String s) {
                         return Long.parseLong(s.split(",")[0]);
