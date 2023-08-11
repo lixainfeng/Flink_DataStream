@@ -22,7 +22,8 @@ public class StateApp {
         list.add(Tuple2.of(2L,2L));
         env.fromCollection(list)
                 .keyBy(x -> x.f0)
-                .flatMap(new AvgWithValueState())
+                //.flatMap(new AvgWithValueState())
+                .flatMap(new AvgWithMapState())
                 .print();
 
 
