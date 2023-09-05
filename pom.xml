@@ -11,6 +11,7 @@
     <modules>
         <module>Flink_BasedApi</module>
         <module>Flink_Demo</module>
+        <module>clickhouse</module>
     </modules>
 
     <properties>
