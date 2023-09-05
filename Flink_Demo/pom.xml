@@ -84,11 +84,7 @@
             <version>1.10.1</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.apache.flink</groupId>
-            <artifactId>flink-connector-kafka_2.11</artifactId>
-            <version>1.12.0</version>
-        </dependency>
+
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-connector-kafka_2.12</artifactId>
@@ -104,17 +100,7 @@
             <artifactId>clickhouse-jdbc</artifactId>
             <version>0.1.54</version>
         </dependency>
-        <dependency>
-            <groupId>org.example</groupId>
-            <artifactId>Flink_BasedApi</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.example</groupId>
-            <artifactId>Flink_Project</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
+
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-core</artifactId>
