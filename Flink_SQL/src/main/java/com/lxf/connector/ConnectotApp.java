@@ -15,7 +15,8 @@ public class ConnectotApp {
     public static void main(String[] args) throws Exception{
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         StreamTableEnvironment tableenv = StreamTableEnvironment.create(env);
-        //querywhitsql(tableenv);
+        // BatchTableEnvironment tableenv = BatchTableEnvironment.create(env);
+        // querywhitsql(tableenv);
         querywhittableapi(tableenv);
         env.execute();
     }
