@@ -12,6 +12,8 @@
         <module>Flink_BasedApi</module>
         <module>Flink_Demo</module>
         <module>clickhouse</module>
+        <module>Flink_DataSet</module>
+        <module>Flink_SQL</module>
     </modules>
 
     <properties>

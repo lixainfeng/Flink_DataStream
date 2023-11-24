@@ -25,7 +25,7 @@ public class WmEventSlidingApp {
                     @Override
                     public long extractTimestamp(String s) {
                         return Long.parseLong(s.split(",")[0]);
-                    }
+                    }//标记性生成
                 });
         lines.map(new MapFunction<String, Tuple2<String,Integer>>() {
             @Override

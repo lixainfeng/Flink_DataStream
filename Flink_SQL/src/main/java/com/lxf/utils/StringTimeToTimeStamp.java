@@ -5,9 +5,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class StringTimeToTimeStamp {
-/*    public static void main(String[] args) {
+    public static void main(String[] args) {
         strtime_timestamp("2019-12-01 10:02:15");
-    }*/
+    }
 
     public static Long strtime_timestamp(String times) {
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
